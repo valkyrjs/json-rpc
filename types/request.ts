@@ -1,6 +1,16 @@
 import type { Id, Params } from "./common.ts";
 
 /**
+ * Representing a potential valid JSON-RPC 2.0 request object.
+ */
+export type RequestCandidate = {
+  jsonrpc?: "2.0";
+  method?: string;
+  params?: Params;
+  id?: Id;
+};
+
+/**
  * A rpc call is represented by sending a Request object to a Server.
  */
 export type Request<P extends Params | void = void> = {

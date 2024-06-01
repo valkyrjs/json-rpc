@@ -1,6 +1,6 @@
-import type { Id, Params } from "~types/common.ts";
+import type { Params } from "~types/common.ts";
 import type { Notification } from "~types/notification.ts";
-import type { Request } from "~types/request.ts";
+import type { Request, RequestCandidate } from "~types/request.ts";
 
 import { InvalidRequestError, ParseError } from "./errors.ts";
 
@@ -64,10 +64,3 @@ export function assertJsonRpcRequest(
     });
   }
 }
-
-type RequestCandidate = {
-  jsonrpc?: "2.0";
-  method?: string;
-  params?: Params;
-  id?: Id;
-};

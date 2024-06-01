@@ -15,4 +15,4 @@ jobs:
       - name: Setup Deno
         uses: maximousblk/setup-deno@v2 # Installs latest version
 
-      - run: deno task test
+      - run: deno test

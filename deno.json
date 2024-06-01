@@ -20,9 +20,5 @@
   },
   "fmt": {
     "lineWidth": 120
-  },
-  "tasks": {
-    "test": "export ENVIRONMENT=testing && deno test --allow-all --unstable-ffi",
-    "lint": "deno lint --fix"
   }
 }
